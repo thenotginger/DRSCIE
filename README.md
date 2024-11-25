@@ -60,10 +60,11 @@ The Digital human blueprint has two components, the digital avatar deployment an
 
 ## Prerequisites
 
-* NVIDIA AI Enterprise or Developer License: NVIDIA NIM for LLMs are available for self-hosting under the NVIDIA AI Enterprise (NVAIE) License.
+* [NVIDIA AI Enterprise](https://enterpriseproductregistration.nvidia.com/?LicType=EVAL&ProductFamily=NVAIEnterprise) or [Developer License](https://developer.nvidia.com/login): NVIDIA NIM for LLMs are available for self-hosting under the NVIDIA AI Enterprise (NVAIE) License.
 * Sign up for NVAIE license. An NGC API key is required to access NGC resources.
   * To obtain a key, navigate to Blueprint experience on NVIDIA API Catalog.
   * Login / Sign up if needed and "Generate your API Key".
+* Apply for [ACE-EA](https://developer.nvidia.com/ace/early-access-program)
 
 ### Digital Avatar
 
