@@ -3,8 +3,11 @@
 ## Customizing Digital Human
 **Persona needed**: Animation/Rendering developer
 
-To customize the digital avatar, please refer to the [Avatar Configurator](https://docs.nvidia.com/ace/latest/modules/avatar_customization/Avatar_Configurator.html#avatar-configurator).  Alternatively you can import a third-party avatar by following the custom avatar guide. More information can be found in the [Avatar Customization](https://docs.nvidia.com/ace/latest/modules/avatar_customization/index.html#avatar-customization) section.
+To customize the digital avatar, please refer to the [Avatar Customization guide](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/customization/Customize_Reference_Workflows.html#avatar-and-scene-customization)
 
+## Customizing the TTS
+**Persona needed**: Machine learning engineer
+Please follow the [guide](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/customization/Customize_Reference_Workflows.html#tts-voice-customization) to add custom voice to the digital human. 
 
 ## Customizing RAG
 **Persona needed**: Machine learning engineer
@@ -39,6 +42,12 @@ chmod +x data_loader.sh
 
 NOTE:  By default, it assumes that the documents are located in the ./data directory, but you can easily modify the script to use any directory of your choice.
 
+### Using a different RAG pipeline
+
+Modification is needed in the /chat API of rag.py to achieve this. The /chat endpoint receives the rag requests and communicates with the RAG pipeline via stream() in the reference application to obtain a response. Ensure that the response is parsed per the response schema of the custom RAG server.
+
+
+## Advanced customization
 
 ## Finetune LLM model
 To enhance the performance of the Meta-Llama3-8b-instruct foundation model for our RAG application, leverage NeMo Framework for Parameter Efficient Fine-Tuning (PEFT). After fine tuning we will integrate the LoRA weights and re-deploy the RAG pipeline.
