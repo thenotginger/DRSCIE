@@ -17,10 +17,10 @@ The Digital Human pipeline: This is powered by the Tokkio-LLM RAG workflow and i
 | Reference Workflow |  Avatar animation & rendering  | Stream options|
 |:-----|:--------:|------:|
 |  Tokkio LLM-RAG-ov  | 3D avatar with Audio2Face-3D & Omniverse Renderer | 1, 3, 6 |
-|  Tokkio LLM-RAG-ue  |   3D avatar with Unreal Engine Renderer (EA) |  1, 3 |
-|   Tokkio LLM-RAG-2D | 2D avatar with Audio2Face-2D (EA) |  1, 3  |
+|  [Tokkio LLM-RAG-ue](https://developer.nvidia.com/ace/early-access-program)  |   3D avatar with Unreal Engine Renderer (EA) |  1, 3 |
+|   [Tokkio LLM-RAG-2D](https://developer.nvidia.com/ace/early-access-program) | 2D avatar with Audio2Face-2D (EA) |  1, 3  |
 
-For this blueprint we will be deployment we will use the tokkio LLM-RAG-ov application.
+For this blueprint we will be deployment we will use the tokkio LLM-RAG-ov-1 application. 
 
 The RAG application is responsible for generating the text context to question-answer interactions and the digital human live avatar, leverages a Tokkio customer service pipeline. Since these two entities are separated, they communicate with one another using the REST API. Developers can build upon this blueprint, by customizing the RAG application and digital avatar based on their specific use case. 
 
@@ -74,7 +74,7 @@ The Digital human blueprint has two components, the digital avatar deployment an
 * Sign up for NVAIE license. An NGC API key is required to access NGC resources.
   * To obtain a key, navigate to Blueprint experience on NVIDIA API Catalog.
   * Login / Sign up if needed and "Generate your API Key".
-* Apply for [ACE-EA](https://developer.nvidia.com/ace/early-access-program)
+
 
 ### Digital Avatar
 
