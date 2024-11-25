@@ -1,17 +1,19 @@
 # Customization - Optional
 
-## Customizing Digital Human
-**Persona needed**: Animation/Rendering developer
+The digital human pipeline can be customized at different points of the pipeline. Some common ways of customizing the pipeline are:
 
-To customize the digital avatar, please refer to the [Avatar Customization guide](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/customization/Customize_Reference_Workflows.html#avatar-and-scene-customization)
+* Connecting the digital human to a RAG endpoint
+* Avatar customization
+* TTS customization
 
-## Customizing the TTS
-**Persona needed**: Machine learning engineer
+Follow the guide [here](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/Quickstart_Guide.html#customization) to go through your customization journey
 
-Please follow the [guide](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/customization/Customize_Reference_Workflows.html#tts-voice-customization) to add custom voice to the digital human. 
+# Deploying the post customization pipeline
 
-## Customizing RAG
-**Persona needed**: Machine learning engineer
+After the required customization, use the [ucf builder app](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/Quickstart_Guide.html#custom-app-deployment) to create the new helm chart which can be deployed again as shown previously [here](../deploy/) 
+
+
+## Advanced customization - Data flywheel
 
 ### Customizing the dataset
 
@@ -43,14 +45,8 @@ chmod +x data_loader.sh
 
 NOTE:  By default, it assumes that the documents are located in the ./data directory, but you can easily modify the script to use any directory of your choice.
 
-### Using a different RAG pipeline
 
-Modification is needed in the /chat API of rag.py to achieve this. The /chat endpoint receives the rag requests and communicates with the RAG pipeline via stream() in the reference application to obtain a response. Ensure that the response is parsed per the response schema of the custom RAG server.
-
-
-## Advanced customization - Data flywheel
-
-## Finetune LLM model
+### Finetune LLM model
 To enhance the performance of the Meta-Llama3-8b-instruct foundation model for our RAG application, leverage NeMo Framework for Parameter Efficient Fine-Tuning (PEFT). After fine tuning we will integrate the LoRA weights and re-deploy the RAG pipeline.
 
 
