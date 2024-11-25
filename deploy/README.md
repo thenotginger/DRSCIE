@@ -3,7 +3,7 @@
 **Persona needed**: Devops Engineer
 
 For this guide, we will deploy the Digital human avatar and the Retrieval Augmented Generation pipeline on separate instances. 
-NOTE:  Here detail a way to deploy the digital human pipeline agnostic of a cloud provider. The deployment specific to a cloud provider can be found here[here](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/deployment/AWS_CSP_Setup_Guide_automated.html). 
+NOTE:  Here detail a way to deploy the digital human pipeline agnostic of a cloud provider. The deployment specific to a cloud provider can be found [here](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/deployment/AWS_CSP_Setup_Guide_automated.html). 
 
 The digital avatar deployment uses cloud native stack deployment script that automates and abstracts out complexities setup and deployment of our application on a virtual or a physical machine with a GPU.  
 
