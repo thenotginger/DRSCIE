@@ -8,7 +8,7 @@ The digital human pipeline can be customized at different points of the pipeline
 
 Follow the guide [here](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/Quickstart_Guide.html#customization) to go through your customization journey
 
-# Deploying the post customization pipeline
+## Deploying the post customization pipeline
 
 After the required customization, use the [ucf builder app](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/Quickstart_Guide.html#custom-app-deployment) to create the new helm chart which can be deployed again as shown previously [here](../deploy/) 
 
