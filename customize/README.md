@@ -7,6 +7,7 @@ To customize the digital avatar, please refer to the [Avatar Customization guide
 
 ## Customizing the TTS
 **Persona needed**: Machine learning engineer
+
 Please follow the [guide](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/customization/Customize_Reference_Workflows.html#tts-voice-customization) to add custom voice to the digital human. 
 
 ## Customizing RAG
@@ -47,7 +48,7 @@ NOTE:  By default, it assumes that the documents are located in the ./data direc
 Modification is needed in the /chat API of rag.py to achieve this. The /chat endpoint receives the rag requests and communicates with the RAG pipeline via stream() in the reference application to obtain a response. Ensure that the response is parsed per the response schema of the custom RAG server.
 
 
-## Advanced customization
+## Advanced customization - Data flywheel
 
 ## Finetune LLM model
 To enhance the performance of the Meta-Llama3-8b-instruct foundation model for our RAG application, leverage NeMo Framework for Parameter Efficient Fine-Tuning (PEFT). After fine tuning we will integrate the LoRA weights and re-deploy the RAG pipeline.
