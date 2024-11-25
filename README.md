@@ -12,6 +12,16 @@ Digital humans will revolutionize industries from customer service, to advertisi
 ## About this blueprint
 This blueprint serves as a starting point for a team of developers to showcase how an LLM or a RAG application can be connected to a digital human pipeline. The digital avatar and the Retrieval-Augmented Generation (RAG) applications are deployed separately. 
 
+The Digital Human pipeline: This is powered by the Tokkio-LLM RAG workflow and includes avatar speech, animation, streaming, vision and orchestration components. The reference workflow comes in multiple variations dependent on desired stream count, avatar type and rendering technology.
+
+| Reference Workflow |  Avatar animation & rendering  | Stream options|
+|:-----|:--------:|------:|
+|  Tokkio LLM-RAG-ov  | 3D avatar with Audio2Face-3D & Omniverse Renderer | 1, 3, 6 |
+|  Tokkio LLM-RAG-ue  |   3D avatar with Unreal Engine Renderer (EA) |  1, 3 |
+|   Tokkio LLM-RAG-2D | 2D avatar with Audio2Face-2D (EA) |  1, 3  |
+
+For this blueprint we will be deployment we will use the tokkio LLM-RAG-ov application.
+
 The RAG application is responsible for generating the text context to question-answer interactions and the digital human live avatar, leverages a Tokkio customer service pipeline. Since these two entities are separated, they communicate with one another using the REST API. Developers can build upon this blueprint, by customizing the RAG application and digital avatar based on their specific use case. 
 
 <p align="center">
