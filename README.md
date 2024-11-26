@@ -12,6 +12,16 @@ Digital humans will revolutionize industries from customer service, to advertisi
 ## About this blueprint
 This blueprint serves as a starting point for a team of developers to showcase how an LLM or a RAG application can be connected to a digital human pipeline. The digital avatar and the Retrieval-Augmented Generation (RAG) applications are deployed separately. 
 
+The Digital Human pipeline: This is powered by the Tokkio-LLM RAG workflow and includes avatar speech, animation, streaming, vision and orchestration components. The reference workflow comes in multiple variations dependent on desired stream count, avatar type and rendering technology.
+
+| Reference Workflow |  Avatar animation & rendering  | Stream options|
+|:-----|:--------:|------:|
+|  Tokkio LLM-RAG-ov  | 3D avatar with Audio2Face-3D & Omniverse Renderer | 1, 3, 6 |
+|  [Tokkio LLM-RAG-ue](https://developer.nvidia.com/ace/early-access-program)  |   3D avatar with Unreal Engine Renderer (EA) |  1, 3 |
+|   [Tokkio LLM-RAG-2D](https://developer.nvidia.com/ace/early-access-program) | 2D avatar with Audio2Face-2D (EA) |  1, 3  |
+
+For this blueprint we will be deployment we will use the tokkio LLM-RAG-ov-1 application. 
+
 The RAG application is responsible for generating the text context to question-answer interactions and the digital human live avatar, leverages a Tokkio customer service pipeline. Since these two entities are separated, they communicate with one another using the REST API. Developers can build upon this blueprint, by customizing the RAG application and digital avatar based on their specific use case. 
 
 <p align="center">
@@ -64,7 +74,7 @@ The Digital human blueprint has two components, the digital avatar deployment an
 * Sign up for NVAIE license. An NGC API key is required to access NGC resources.
   * To obtain a key, navigate to Blueprint experience on NVIDIA API Catalog.
   * Login / Sign up if needed and "Generate your API Key".
-* Apply for [ACE-EA](https://developer.nvidia.com/ace/early-access-program)
+
 
 ### Digital Avatar
 
@@ -76,12 +86,13 @@ Supported NVIDIA GPU hardware:
 * L4
 * L40S
 
-A minimum of 2 GPUs are required for 1 stream and 4 GPUs for 3 streams. For this blueprint guide, we will deploy the digital avatar pipeline on [AWS](https://docs.aws.amazon.com/dlami/latest/devguide/gpu.html) using a g5.12xlarge machine.  The blueprint requires at least a 8 core CPU, 64GB of system memory and 500GB of disk space.
+A minimum of 2 GPUs are required for 1 stream and 4 GPUs for 3 streams. For this blueprint guide, The blueprint requires at least a 8 core CPU, 64GB of system memory and 500GB of disk space.
 
 NOTE:  If you are setting this up on GCP or Azure. Please checkout the GPU instance types for the corresponding providers. 
 
 #### System requirements
-Ubuntu 20.04 or 22.04 based machine, with sudo privileges for the user to run the automated deployment scripts.
+
+The setup for tokkio requires two instances, a controller instance and an application instance, The controller instance doesn't require GPUs and it where we luanch the automation scripts from.Both require a Ubuntu 20.04 or 22.04 based machine, with sudo privileges for the user to run the automated deployment scripts. 
 
 NOTE:  In an upcoming step, you will use one click scripts in the Digital Avatar deployment instructions to set up everything else.
 
