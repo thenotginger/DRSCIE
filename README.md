@@ -86,12 +86,13 @@ Supported NVIDIA GPU hardware:
 * L4
 * L40S
 
-A minimum of 2 GPUs are required for 1 stream and 4 GPUs for 3 streams. For this blueprint guide, we will deploy the digital avatar pipeline on [AWS](https://docs.aws.amazon.com/dlami/latest/devguide/gpu.html) using a g5.12xlarge machine.  The blueprint requires at least a 8 core CPU, 64GB of system memory and 500GB of disk space.
+A minimum of 2 GPUs are required for 1 stream and 4 GPUs for 3 streams. For this blueprint guide, The blueprint requires at least a 8 core CPU, 64GB of system memory and 500GB of disk space.
 
 NOTE:  If you are setting this up on GCP or Azure. Please checkout the GPU instance types for the corresponding providers. 
 
 #### System requirements
-Ubuntu 20.04 or 22.04 based machine, with sudo privileges for the user to run the automated deployment scripts.
+
+The setup for tokkio requires two instances, a controller instance and an application instance, The controller instance doesn't require GPUs and it where we luanch the automation scripts from.Both require a Ubuntu 20.04 or 22.04 based machine, with sudo privileges for the user to run the automated deployment scripts. 
 
 NOTE:  In an upcoming step, you will use one click scripts in the Digital Avatar deployment instructions to set up everything else.
 
