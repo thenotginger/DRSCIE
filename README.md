@@ -20,12 +20,10 @@ The Digital Human pipeline: This is powered by the Tokkio-LLM RAG workflow and i
 |  Tokkio LLM-RAG-ue  |   3D avatar with Unreal Engine Renderer [Early Access](https://developer.nvidia.com/ace/early-access-program) |  1, 3 |
 |  Tokkio LLM-RAG-2D | 2D avatar with Audio2Face-2D [Early Access](https://developer.nvidia.com/ace/early-access-program) |  1, 3  |
 
-For this blueprint, we will use the tokkio LLM-RAG-ov-1 application. 
-
 The RAG application is responsible for generating the text context to question-answer interactions and the digital human live avatar, leverages a Tokkio customer service pipeline. Since these two entities are separated, they communicate with one another using the REST API. Developers can build upon this blueprint, by customizing the RAG application and digital avatar based on their specific use case. 
 
 <p align="center">
- <img width="800" alt="dht" src="https://github.com/user-attachments/assets/64bd6115-035c-4b2f-88d4-ba8f2c2b29ac">
+ <img width="800" alt="dht" src="https://github.com/user-attachments/assets/91157444-4e25-4f19-a3c7-8b5397cb5c02">
 </p>
 
 ## Software Components
