@@ -17,10 +17,10 @@ The Digital Human pipeline: This is powered by the Tokkio-LLM RAG workflow and i
 | Reference Workflow |  Avatar animation & rendering  | Stream options|
 |:-----|:--------:|------:|
 |  Tokkio LLM-RAG-ov  | 3D avatar with Audio2Face-3D & Omniverse Renderer | 1, 3, 6 |
-|  [Tokkio LLM-RAG-ue](https://developer.nvidia.com/ace/early-access-program)  |   3D avatar with Unreal Engine Renderer (EA) |  1, 3 |
-|   [Tokkio LLM-RAG-2D](https://developer.nvidia.com/ace/early-access-program) | 2D avatar with Audio2Face-2D (EA) |  1, 3  |
+|  Tokkio LLM-RAG-ue  |   3D avatar with Unreal Engine Renderer [Early Access](https://developer.nvidia.com/ace/early-access-program) |  1, 3 |
+|  Tokkio LLM-RAG-2D | 2D avatar with Audio2Face-2D [Early Access](https://developer.nvidia.com/ace/early-access-program) |  1, 3  |
 
-For this blueprint we will be deployment we will use the tokkio LLM-RAG-ov-1 application. 
+For this blueprint, we will use the tokkio LLM-RAG-ov-1 application. 
 
 The RAG application is responsible for generating the text context to question-answer interactions and the digital human live avatar, leverages a Tokkio customer service pipeline. Since these two entities are separated, they communicate with one another using the REST API. Developers can build upon this blueprint, by customizing the RAG application and digital avatar based on their specific use case. 
 
@@ -47,7 +47,6 @@ Setting up the digital human pipelines, as well as customization, requires a tec
 ### Persona-1: Devops engineer
 To deploy this blueprint, you must be comfortable deploying applications/helm charts on Kubernetes, creating resources on cloud service provider platforms and have general deployment expertise.
 
-
 ### Persona-2: GenAI developer/ Machine learning engineer
 Since this blueprint will require customization for your specific use case, you should have necessary technical expertise to take the existing blueprint and change it to suit your needs. This includes, but is not limited to changing the RAG pipeline for your specific dataset and fine tuning the LLMs if needed.
 
@@ -56,6 +55,8 @@ NOTE:  Please refer to the customization section for additional information.
 ### Persona-3: (Optional) Animation/Rendering developer 
 Tokkio allows you to customize your live avatar with the Avatar Configurator or alternatively you can import a third-party avatar by following the custom avatar guide. More information can be found in the Avatar Customization section. If you are looking to customize the avatar away from the default one then you would need an engineer comfortable in above.
 
+### Persona-4: (Optional) Network Engineering / IT system admin 
+Tokkio is a web based interactive Digital Human application, requiring communication over various UDP & TCP ports. Production environments often include a complex heirarchy schema for ingress and egress and over different ports and port ranges. Working with your network engineering and IT system administrator ensures that network topology is well understood to ensure proper bring up and necessary communication from the web based application.
 
 ## Get Started
 
@@ -86,9 +87,9 @@ Supported NVIDIA GPU hardware:
 * L4
 * L40S
 
-A minimum of 2 GPUs are required for 1 stream and 4 GPUs for 3 streams. For this blueprint guide, The blueprint requires at least a 8 core CPU, 64GB of system memory and 500GB of disk space.
+A minimum of 2 GPUs are required for 1 stream (eg: LLM-RAG-ov-1 application) and 4 GPUs for 3 streams (eg: LLM-RAG-ov-3 application). For this blueprint guide, The blueprint requires at least a 8 core CPU, 64GB of system memory and 500GB of disk space.
 
-NOTE:  If you are setting this up on GCP or Azure. Please checkout the GPU instance types for the corresponding providers. 
+NOTE:  If you are setting this up on AWS, GCP or Azure. Please checkout the GPU instance types for the corresponding providers. 
 
 #### System requirements
 
