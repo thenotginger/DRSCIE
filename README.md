@@ -26,19 +26,6 @@ The RAG application is responsible for generating the text context to question-a
  <img width="800" alt="dht" src="https://github.com/user-attachments/assets/91157444-4e25-4f19-a3c7-8b5397cb5c02">
 </p>
 
-## Software Components
-The RAG-based AI digital human provides a reference to build an enterprise-ready generative AI solution with minimal effort. It contains the following software components:
-
-* ACE Tokkio Customer Service
-  * 3D Animation Pipeline - [Audio2Face NIM](https://build.nvidia.com/nvidia/audio2face)
-  * Audio Pipeline - [Parakeet-ctc-1.1b.asr NIM](https://build.nvidia.com/nvidia/parakeet-ctc-1_1b-asr) and ElevenLabs TTS
-* Response RAG Generation (Inference)
-  * LLM - [Llama-3-8B-instruct NIM](https://build.nvidia.com/meta/llama3-8b)
-  * NeMo Retriever embedding - [NV-Embed-QA-v5 NIM](https://build.nvidia.com/nvidia/nv-embedqa-e5-v5)
-  * NeMo Retriever reranking - [Rerank-Mistral-4b-v3 NIM](https://build.nvidia.com/nvidia/nv-rerankqa-mistral-4b-v3)
-* RAG Text Retriever - LangChain
-* RAG Unstructured Data (PDF) Ingestion - Milvus Database (Vector GPU-optimized)
-
 ## Target audience
 Setting up the digital human pipelines, as well as customization, requires a technical team with expertise in different areas of the software stack.
 
