@@ -6,14 +6,16 @@ The digital human pipeline can be customized at different points of the pipeline
 * Avatar customization
 * TTS customization
 
-Follow the guide [here](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/Quickstart_Guide.html#customization) to go through your customization journey
+Follow the guide [here](https://docs.nvidia.com/ace/tokkio/4.1/customization/customization.html) to go through your customization journey.
 
 ## Deploying the post customization pipeline
 
-After the required customization, use the [ucf builder app](https://docs.nvidia.com/ace/latest/workflows/tokkio/text/Quickstart_Guide.html#custom-app-deployment) to create the new helm chart which can be deployed again as shown previously [here](../deploy/) 
+After the required customization, integrating the customization can follow two paths, depending on the type of customization:
+1. Integrating the customization [without rebuilding the chart](https://docs.nvidia.com/ace/tokkio/4.1/customization/customize-without-rebuild.html)
+2. Integrating the customization [with a chart rebuild](https://docs.nvidia.com/ace/tokkio/4.1/customization/customize-with-rebuild.html)
 
 
-## Advanced customization - Data flywheel
+## Advanced customization - Data flywheel (relevant for RAG pipeline only)
 
 ### Customizing the dataset
 
