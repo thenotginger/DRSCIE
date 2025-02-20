@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-FileCopyrightText: Copyright (c) 2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,21 +28,10 @@ body:
     id: version
     attributes:
       label: Version
-      description: What version of __PROJECT__ are you running?
-      placeholder: "example: 23.02"
+      description: What version of digital-human are you running?
+      placeholder: "example: 1.0.0"
     validations:
       required: true
-
-  - type: dropdown
-    id: installation-method
-    attributes:
-      label: Which installation method(s) does this occur on?
-      multiple: true
-      options:
-        - Docker
-        - Conda
-        - Pip
-        - Source
 
   - type: textarea
     id: description
